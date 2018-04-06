@@ -1,0 +1,256 @@
+<!DOCTYPE html> 
+<html> 
+<head> 
+<title>Lago Negro e Alta Valle del Sestaione</title> 
+<meta charset="utf-8">
+<meta name="Lago Negro e Alta Valle del Sestaione" content="Progetto">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<link rel="stylesheet" href="css/jquery.mobile-1.0rc1.min.css" />
+<script type="text/javascript" src="js/jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script type="text/javascript" src="js/percorso_sestaione.js"></script><script type="text/javascript" src="js/percorso_sestaione.js"></script>
+<link rel='stylesheet prefetch' href='https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'>
+<style>
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 320px;
+}
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+body { font-family: 'PT Sans', sans-serif;
+     }
+table, th, td {
+     margin-left: auto;
+     margin-right: auto;
+     border: 1px solid black;
+     border-collapse: collapse;
+}
+
+
+
+p {  
+     color: black;
+   }
+	
+</style>
+<script src='https://unpkg.com/leaflet@1.3.1/dist/leaflet.js'></script>
+
+
+</head> 
+<body> 
+<div data-role="page" id="Progetto">
+<div data-role="header" data-position="fixed">
+<div data-role="navbar">
+				<ul>
+					<li><a href="#Progetto" data-transition="slideup" class="ui-btn-active">Progetto</a></li>
+					<li><a href="#Mappa" onclick="setTimeout(function(){ map.invalidateSize(true)},50);" data-transition="slideup">Mappa</a></li>
+					<li><a href="#Info" data-transition="slideup">Info</a></li>
+				</ul>
+			</div>
+		</div>
+<!-- /header -->
+
+
+<div data-role="content">
+<p><img src="images/sfondo.jpg" alt="Grande scoperta"></p>
+<h2 id="a-piccoli-passi-verso-una-grande-scoperta"><span style="color:red">A piccoli</span> <span style="color:blue"> passi verso</span> una <span style="color:green">grande scoperta</h2>
+<p><strong><span style="color:blue">Il Lago Nero</span> e <span style="color:green">L ’Alta Valle</span> del <span style="color:red">Sestaione</span></strong></p>
+<p>Ci presentiamo: siamo la <strong>2°A</strong> della <em>Scuola Media Anna Frank</em>.</p>
+<p>Abbiamo scelto di costruire uno strumento agile e di facile consultazione che possa essere utile ai turisti interessati a visitare questo magnifico angolo della provincia di Pistoia, ricco di storia, di paesaggi affascinanti, di specie vegetali e animali molto particolari e rare. Si tratta di una delle aree più pregiate dell’Appennino settentrionale che custodisce al suo interno popolamenti vegetali annoverati fra quelli di interesse conservazionistico dalla Direttiva Habitat del 1992.</p>
+<p>Tutto è cominciato con l’incontro con il Dott. Simone Vergari, il quale ci ha introdotto a quella che sarebbe poi risultata un’esperienza unica, la passeggiata fino al Lago Nero. Quello che ci ha detto ci ha incuriosito e motivato quanto bastava perché, arrivati all’Orto Botanico dell’Abetone, non vedessimo l’ora di partire. E le aspettative sono state ampiamente superate da ciò che abbiamo visto, provato e imparato. Tutto il materiale raccolto, soprattutto fotografico, ci è servito, assieme a pubblicazioni particolari, ad allestire poi questo prodotto, su cui abbiamo lavorato a lungo.</p>
+<p>L’area che abbiamo attraversato rientra nel perimetro del SIC (<em>Sito di Importanza Comunitaria</em>, Rete Natura 2000) IT5130001 Alta Valle del Sestaione. Molto vicino al sentiero che abbiamo percorso c’è la Riserva Statale di Campolino.</p>
+<p>Una precisazione sui colori: useremo per i titoli il colore <span style="color:red"><strong>rosso</strong></span> per indicare i paragrafi di interesse storico – letterario, in <span style="color:blue"><strong>azzurro</strong> </span>quelli di interesse geografico – geomorfologico e in <span style="color:green"><strong>verde</strong> </span>quelli di interesse ecologico – biologico.</p>
+<p>Ecco i principali punti del nostro percorso:</p>
+
+<a href="html/1_par.html"><button>Sito 1</button></a>
+<a href="html/2_par.html"><button>Sito 2</button></a>
+<a href="html/3_par.html"><button>Sito 3</button></a>
+<a href="html/4_par.html"><button>Sito 4</button></a>
+<a href="html/5_par.html"><button>Sito 5</button></a>
+<a href="html/6_par.html"><button>Sito 6</button></a>
+<a href="html/7_par.html"><button>Sito 7</button></a>
+<a href="html/8_par.html"><button>Sito 8</button></a>
+<a href="html/9_par.html"><button>Sito 9</button></a>
+<a href="html/10_par.html"><button>Sito 10</button></a>
+<a href="html/11_par.html"><button>Sito 11</button></a>
+<a href="html/12_par.html"><button>Sito 12</button></a>
+<a href="html/13_par.html"><button>Sito 13</button></a>
+<a href="html/14_par.html"><button>Sito 14</button></a>
+<a href="html/15_par.html"><button>Sito 15</button></a>
+<a href="html/16_par.html"><button>Sito 16</button></a>
+<a href="html/17_par.html"><button>Sito 17</button></a>
+<a href="html/18_par.html"><button>Sito 18</button></a>
+<a href="html/19_par.html"><button>Sito 19</button></a>
+<a href="html/20_par.html"><button>Sito 20</button></a>
+<a href="html/21_par.html"><button>Sito 21</button></a>
+<a href="html/22_par.html"><button>Sito 22</button></a>
+</div>
+<!-- /content -->
+<div data-role="footer" data-position="fixed">
+			<h5>Scuola media Anna Frank 2A</h5>
+		</div><!-- /footer -->
+</div><!-- /page -->
+	
+<div data-role="page" id="Mappa">
+<div data-role="header" data-position="fixed" >
+			<a href="index.html" data-rel="back">back</a>
+			<h1>Mappa</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#Progetto" data-transition="slideup">Progetto</a></li>
+					<li><a href="#Mappa"  data-transition="slideup" class="ui-btn-active">Mappa</a></li>
+					<li><a href="#Info" data-transition="slideup">Info</a></li>
+				</ul>
+			</div>
+</div><!-- /header Mappa-->
+
+		<div data-role="content">
+                      <div id="mapid" style="top:76px; left:0; bottom:0; right:0;  position:absolute;"></div>
+<script>
+var map;
+
+$(function (){
+        
+    var element = $('#Mappa');
+
+   
+  var OpenTopoMap = L.tileLayer('https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', {
+	maxZoom: 17,
+	attribution: 'Map data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
+});
+
+
+
+
+var OpenStreetMap_Mapnik = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+	maxZoom: 20,
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap contributors</a>'});
+
+
+
+map = L.map('mapid', {
+		center: [44.11864,10.64800],
+		zoom: 14,
+		layers: [OpenTopoMap]
+	});
+  
+	
+var forestIcon = L.icon({
+		iconUrl: 'images/img_forest.png',
+		iconSize: [22, 27],
+		iconAnchor: [16, 37],
+		popupAnchor: [0, -28]
+	});
+
+var m_sito_1=L.marker([44.12591,10.66454], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/1_par.html"><strong>Sito 1</strong><a>');
+var m_sito_2=L.marker([44.12468,10.66204], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/2_par.html"><strong>Sito 2</strong><a>');
+var m_sito_3=L.marker([44.12396,10.66025], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/3_par.html"><strong>Sito 3</strong><a>');
+var m_sito_4=L.marker([44.12286,10.65779], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/4_par.html"><strong>Sito 4</strong><a>');
+var m_sito_5=L.marker([44.12235,10.65705], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/5_par.html"><strong>Sito 5</strong><a>');
+var m_sito_6=L.marker([44.12133,10.65565], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/6_par.html"><strong>Sito 6</strong><a>');
+var m_sito_7=L.marker([44.12064,10.65421], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/7_par.html"><strong>Sito 7</strong><a>');
+var m_sito_8=L.marker([44.12014,10.65152], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/8_par.html"><strong>Sito 8</strong><a>');
+var m_sito_9=L.marker([44.11870,10.64826], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/9_par.html"><strong>Sito 9</strong><a>');
+var m_sito_10=L.marker([44.11864,10.64800], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/10_par.html"><strong>Sito 10</strong><a>');
+var m_sito_11=L.marker([44.11912,10.64730], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/11_par.html"><strong>Sito 11</strong><a>');
+var m_sito_12=L.marker([44.11769,10.64499], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/12_par.html"><strong>Sito 12</strong><a>');
+var m_sito_13=L.marker([44.11691,10.64237], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/13_par.html"><strong>Sito 13</strong><a>');
+var m_sito_14=L.marker([44.11375,10.64044], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/14_par.html"><strong>Sito 14</strong><a>');;
+var m_sito_15=L.marker([44.11377,10.63779], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/15_par.html"><strong>Sito 15</strong><a>');
+var m_sito_16=L.marker([44.11512,10.63664], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/16_par.html"><strong>Sito 16</strong><a>');
+var m_sito_17=L.marker([44.11515,10.63643], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/17_par.html"><strong>Sito 17</strong><a>');
+var m_sito_18=L.marker([44.11358,10.63770], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/18_par.html"><strong>Sito 18</strong><a>');
+var m_sito_19=L.marker([44.11216,10.63889], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/19_par.html"><strong>Sito 19</strong><a>');
+var m_sito_20=L.marker([44.11208,10.64718], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/20_par.html"><strong>Sito 20</strong><a>');
+var m_sito_21=L.marker([44.11209,10.64791], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/21_par.html"><strong>Sito 21</strong><a>');
+var m_sito_22=L.marker([44.11337,10.64965], {icon: forestIcon}).addTo(map).bindPopup('<a href="html/22_par.html"><strong>Sito 22</strong><a>');
+
+
+function basement(feature, layer) {
+  layer.bindPopup("Percorso Lagonegro Sestaione")
+}
+
+var percorso = new L.geoJson(percorso_sestaione, {
+  style: {
+    weight: 4,
+    color: "red",
+    opacity: 1,
+    fillColor: "red",
+    fillOpacity: 0.5
+  },
+  onEachFeature: basement
+}).addTo(map);
+
+
+
+
+
+element.height(element.height() - 42);
+
+setTimeout(function(){map.invalidateSize()},1000);
+
+});
+
+
+</script>
+			
+			
+		</div>
+               <!-- /content -->
+
+		<div data-role="footer" data-position="fixed">
+			<h5>Scuola media Anna Frank 2A</h5>
+		</div><!-- /footer -->
+	</div><!-- /page -->
+
+<div data-role="page" id="Info">
+     <div data-role="header" data-position="fixed">
+			<a href="index.html" data-rel="back">back</a>
+			<h1>Info</h1>
+			<div data-role="navbar">
+				<ul>
+					<li><a href="#Progetto" data-transition="slideup">Progetto</a></li>
+					<li><a href="#Mappa"  data-transition="slideup">Mappa</a></li>
+					<li><a href="#Info" data-transition="slideup" class="ui-btn-active">Info</a></li>
+				</ul>
+			</div>
+		</div><!-- /header --> 
+
+		<div data-role="content">	
+			<h2>Info</h2>		
+			<ul>    
+
+                                <li><strong>Istituto Comprensivo Frank Carradori</strong><br> 2°A della secondaria di 1° grado, Via Donati 19, 51100 Pistoia</li>
+				<li><strong>Simone Vergari</strong><br>Museo Naturalistico e Archeologico dell’Appennino Pistoiese, Palazzo Achilli, Piazzetta Achilli 7, I-51028 Gavinana (Pistoia)
+</li>
+				<li><strong>Daniele Vergari </strong>Associazione G. B. Landeschi, San Miniato (Pisa)</li>
+                                <li><strong>Alfonso Crisci </strong>Istituto di Biometeorologia, CNR, Firenze</li>
+                                <li><strong>Andrea Cappugi </strong>Software developer</li>
+                          
+			
+            </ul>
+			<h2>Contatti</h2>		
+			<ul>
+                                 <li><strong>Simone Vergari</strong></li>
+                                 <li><strong>Telefono: </strong>+393476157961</li>
+				 <li><strong>Mail: </strong><a href="mailto:sim.vergari@gmail.com">sim.vergari@gmail.com</a></li>
+				 <li><strong>Indirizzo: </strong>Piazzetta Achilli 7, I-51028 Gavinana</li>
+			</ul>
+			
+		</div><!-- /content -->
+
+		<div data-role="footer" data-position="fixed">
+			<h5>Scuola media Anna Frank  2A</h5>
+                </div><!-- /footer -->
+	</div><!-- /page -->
+	
+	</body>
+	</html>
+
